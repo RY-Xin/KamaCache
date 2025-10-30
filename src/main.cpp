@@ -1,7 +1,12 @@
 #include <iostream>
 using namespace std;
 
+void container_demo();
+
 int main() {
+    cout << "Running KamaCache demo..." << endl;
+    container_demo();
+    
     int a = 10;
     int &ref = a; // reference, ref is an alias of 'a'
     int *ptr = &a; //pointer that stores the address of 'a'

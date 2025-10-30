@@ -3,7 +3,7 @@
 #include <list>
 using namespace std;
 
-int main() {
+void container_demo() {
     unordered_map<int, string> mp; //Create an unordered_map
     //Insert key-value pairs
     mp[1] = "apple";
@@ -25,5 +25,5 @@ int main() {
     for (int x : lst) cout << x << " "; //Traverse and print list elements
 
     cout << endl;
-    return 0;
+    return;
 }
