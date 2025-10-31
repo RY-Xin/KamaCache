@@ -1,3 +1,5 @@
-/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles/KamaCache.dir
+/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles/main.dir
+/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles/lru_demo.dir
+/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles/lfu_demo.dir
 /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles/edit_cache.dir
 /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles/rebuild_cache.dir

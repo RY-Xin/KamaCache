@@ -63,11 +63,15 @@ CMAKE_BINARY_DIR = /Users/xinhuiyu/Desktop/KamaCache/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/KamaCache.dir/all
+all: CMakeFiles/main.dir/all
+all: CMakeFiles/lru_demo.dir/all
+all: CMakeFiles/lfu_demo.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/KamaCache.dir/codegen
+codegen: CMakeFiles/main.dir/codegen
+codegen: CMakeFiles/lru_demo.dir/codegen
+codegen: CMakeFiles/lfu_demo.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +79,106 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/KamaCache.dir/clean
+clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/lru_demo.dir/clean
+clean: CMakeFiles/lfu_demo.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/KamaCache.dir
+# Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/KamaCache.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=1,2,3 "Built target KamaCache"
-.PHONY : CMakeFiles/KamaCache.dir/all
+CMakeFiles/main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=6,7,8 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/KamaCache.dir/rule: cmake_check_build_system
+CMakeFiles/main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/KamaCache.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles 0
-.PHONY : CMakeFiles/KamaCache.dir/rule
+.PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-KamaCache: CMakeFiles/KamaCache.dir/rule
-.PHONY : KamaCache
+main: CMakeFiles/main.dir/rule
+.PHONY : main
 
 # codegen rule for target.
-CMakeFiles/KamaCache.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target KamaCache"
-.PHONY : CMakeFiles/KamaCache.dir/codegen
+CMakeFiles/main.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=6,7,8 "Finished codegen for target main"
+.PHONY : CMakeFiles/main.dir/codegen
 
 # clean rule for target.
-CMakeFiles/KamaCache.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/clean
-.PHONY : CMakeFiles/KamaCache.dir/clean
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lru_demo.dir
+
+# All Build rule for target.
+CMakeFiles/lru_demo.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=3,4,5 "Built target lru_demo"
+.PHONY : CMakeFiles/lru_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lru_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lru_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles 0
+.PHONY : CMakeFiles/lru_demo.dir/rule
+
+# Convenience name for target.
+lru_demo: CMakeFiles/lru_demo.dir/rule
+.PHONY : lru_demo
+
+# codegen rule for target.
+CMakeFiles/lru_demo.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=3,4,5 "Finished codegen for target lru_demo"
+.PHONY : CMakeFiles/lru_demo.dir/codegen
+
+# clean rule for target.
+CMakeFiles/lru_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/clean
+.PHONY : CMakeFiles/lru_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lfu_demo.dir
+
+# All Build rule for target.
+CMakeFiles/lfu_demo.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=1,2 "Built target lfu_demo"
+.PHONY : CMakeFiles/lfu_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lfu_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lfu_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles 0
+.PHONY : CMakeFiles/lfu_demo.dir/rule
+
+# Convenience name for target.
+lfu_demo: CMakeFiles/lfu_demo.dir/rule
+.PHONY : lfu_demo
+
+# codegen rule for target.
+CMakeFiles/lfu_demo.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/xinhuiyu/Desktop/KamaCache/build/CMakeFiles --progress-num=1,2 "Finished codegen for target lfu_demo"
+.PHONY : CMakeFiles/lfu_demo.dir/codegen
+
+# clean rule for target.
+CMakeFiles/lfu_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/clean
+.PHONY : CMakeFiles/lfu_demo.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

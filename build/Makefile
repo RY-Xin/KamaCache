@@ -117,48 +117,125 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named KamaCache
+# Target rules for targets named main
 
 # Build rule for target.
-KamaCache: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 KamaCache
-.PHONY : KamaCache
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-KamaCache/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/build
-.PHONY : KamaCache/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-src/container_demo.o: src/container_demo.cpp.o
-.PHONY : src/container_demo.o
+#=============================================================================
+# Target rules for targets named lru_demo
+
+# Build rule for target.
+lru_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lru_demo
+.PHONY : lru_demo
+
+# fast build rule for target.
+lru_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/build
+.PHONY : lru_demo/fast
+
+#=============================================================================
+# Target rules for targets named lfu_demo
+
+# Build rule for target.
+lfu_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lfu_demo
+.PHONY : lfu_demo
+
+# fast build rule for target.
+lfu_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/build
+.PHONY : lfu_demo/fast
+
+src/lfu_cache.o: src/lfu_cache.cpp.o
+.PHONY : src/lfu_cache.o
 
 # target to build an object file
-src/container_demo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/src/container_demo.cpp.o
-.PHONY : src/container_demo.cpp.o
+src/lfu_cache.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/src/lfu_cache.cpp.o
+.PHONY : src/lfu_cache.cpp.o
 
-src/container_demo.i: src/container_demo.cpp.i
-.PHONY : src/container_demo.i
+src/lfu_cache.i: src/lfu_cache.cpp.i
+.PHONY : src/lfu_cache.i
 
 # target to preprocess a source file
-src/container_demo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/src/container_demo.cpp.i
-.PHONY : src/container_demo.cpp.i
+src/lfu_cache.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/src/lfu_cache.cpp.i
+.PHONY : src/lfu_cache.cpp.i
 
-src/container_demo.s: src/container_demo.cpp.s
-.PHONY : src/container_demo.s
+src/lfu_cache.s: src/lfu_cache.cpp.s
+.PHONY : src/lfu_cache.s
 
 # target to generate assembly for a file
-src/container_demo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/src/container_demo.cpp.s
-.PHONY : src/container_demo.cpp.s
+src/lfu_cache.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lfu_demo.dir/build.make CMakeFiles/lfu_demo.dir/src/lfu_cache.cpp.s
+.PHONY : src/lfu_cache.cpp.s
+
+src/lru_cache.o: src/lru_cache.cpp.o
+.PHONY : src/lru_cache.o
+
+# target to build an object file
+src/lru_cache.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lru_cache.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/src/lru_cache.cpp.o
+.PHONY : src/lru_cache.cpp.o
+
+src/lru_cache.i: src/lru_cache.cpp.i
+.PHONY : src/lru_cache.i
+
+# target to preprocess a source file
+src/lru_cache.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lru_cache.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/src/lru_cache.cpp.i
+.PHONY : src/lru_cache.cpp.i
+
+src/lru_cache.s: src/lru_cache.cpp.s
+.PHONY : src/lru_cache.s
+
+# target to generate assembly for a file
+src/lru_cache.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lru_cache.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/src/lru_cache.cpp.s
+.PHONY : src/lru_cache.cpp.s
+
+src/lru_demo.o: src/lru_demo.cpp.o
+.PHONY : src/lru_demo.o
+
+# target to build an object file
+src/lru_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/src/lru_demo.cpp.o
+.PHONY : src/lru_demo.cpp.o
+
+src/lru_demo.i: src/lru_demo.cpp.i
+.PHONY : src/lru_demo.i
+
+# target to preprocess a source file
+src/lru_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/src/lru_demo.cpp.i
+.PHONY : src/lru_demo.cpp.i
+
+src/lru_demo.s: src/lru_demo.cpp.s
+.PHONY : src/lru_demo.s
+
+# target to generate assembly for a file
+src/lru_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lru_demo.dir/build.make CMakeFiles/lru_demo.dir/src/lru_demo.cpp.s
+.PHONY : src/lru_demo.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +243,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +251,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KamaCache.dir/build.make CMakeFiles/KamaCache.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -185,10 +262,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... KamaCache"
-	@echo "... src/container_demo.o"
-	@echo "... src/container_demo.i"
-	@echo "... src/container_demo.s"
+	@echo "... lfu_demo"
+	@echo "... lru_demo"
+	@echo "... main"
+	@echo "... src/lfu_cache.o"
+	@echo "... src/lfu_cache.i"
+	@echo "... src/lfu_cache.s"
+	@echo "... src/lru_cache.o"
+	@echo "... src/lru_cache.i"
+	@echo "... src/lru_cache.s"
+	@echo "... src/lru_demo.o"
+	@echo "... src/lru_demo.i"
+	@echo "... src/lru_demo.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
